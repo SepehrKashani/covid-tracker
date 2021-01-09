@@ -1,0 +1,28 @@
+
+.info-card {
+    width: 23%;
+   height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    color: #252526;
+    padding: 32px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    text-align: center;
+}
+
+.info-heading {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .info-card {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
