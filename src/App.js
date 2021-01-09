@@ -103,6 +103,7 @@ function App() {
               className="info-card"
               title="Total cases"
               cases={countryInfo.cases}
+              style={{ borderTop: "10px solid #282C34" }}
             />
             <InfoBox
               className="info-card"
