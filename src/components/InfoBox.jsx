@@ -1,13 +1,14 @@
 import React from "react";
 import "./InfoBox.css";
+import numeral from 'numeral'
 
 const InfoBox = ({ countries, selectedCountry, title, cases }) => {
-  // const numberWithCommas = x => {
-  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  // };
+  
+  const formatNumbers = (cases) => numeral((String(cases))).format('0,0')
+  
   return (
     <div className="info-card">
-      <h1 className="info-heading">{cases}</h1>
+      <h1 className="info-heading">{formatNumbers(cases)}</h1>
       <p className="info-text">{title}</p>
     </div>
   );
