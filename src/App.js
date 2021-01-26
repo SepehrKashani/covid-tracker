@@ -3,6 +3,8 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 import InfoBox from "./components/InfoBox";
+import Fade from 'react-reveal/Fade'
+import Pulse from 'react-reveal/Pulse'
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -65,7 +67,8 @@ function App() {
 
   return (
     <div className="parent-wrapper">
-      <img
+     <Pulse>
+     <img
         src="/images/left-side.png"
         alt=""
         style={{ position: "absolute", top: "45%", left: 0, height: 150 }}
@@ -75,11 +78,11 @@ function App() {
         alt=""
         style={{ position: "absolute", bottom: 50, right: 0, width: 226 }}
       />
-
+     </Pulse>
+     
       <div className="wrapper">
         <div className="header">
           <h1>Covid Tracker</h1>
-
           <select
             className="select-input"
             value={country}
@@ -90,6 +93,7 @@ function App() {
             {RenderCountries}
           </select>
         </div>
+      
         <div className="main-section">
           <h1 className="main-header">COVID-19</h1>
           <p className="main-text">
@@ -98,7 +102,8 @@ function App() {
             COVID-19 will experience mild to moderate symptoms and recover
             without special treatment.
           </p>
-          <div className="info-wrapper">
+          <Fade top>
+            <div className="info-wrapper"> 
             <InfoBox
               className="info-card"
               title="Total cases"
@@ -121,6 +126,7 @@ function App() {
               cases={countryInfo.population}
             />
           </div>
+          </Fade> 
         </div>
       </div>
     </div>

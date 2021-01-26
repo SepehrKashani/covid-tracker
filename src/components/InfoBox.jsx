@@ -2,7 +2,7 @@ import React from "react";
 import "./InfoBox.css";
 import numeral from 'numeral'
 
-const InfoBox = ({ countries, selectedCountry, title, cases }) => {
+const InfoBox = ({title, cases }) => {
   
   const formatNumbers = (cases) => numeral((String(cases))).format('0,0')
   
